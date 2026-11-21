@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>শিখি অনলাইন | Shikhi Online</title>
+<meta name="description" content="বাংলা শিক্ষামূলক ভিডিও, অনলাইন ক্লাস, স্পোকেন ইংলিশ, ফ্রিল্যান্সিং ও পরীক্ষার প্রস্তুতি। Bangla educational videos, online classes, spoken English and freelancing.">
+<meta name="theme-color" content="#0f2a5e">
+<meta property="og:title" content="Shikhi Online | শিখি অনলাইন">
+<meta property="og:description" content="শিখি সহজে, এগিয়ে চলি — Learn easy, move ahead.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23123a82' stroke='%23ffb400' stroke-width='5'/%3E%3Cpath d='M42 22l24 13-24 13z' fill='%23ffb400'/%3E%3Cpath d='M20 58q15-6 30 2q15-8 30-2v24q-15-6-30 2q-15-8-30-2z' fill='%232fc4b7'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&family=Poppins:wght@600;700&display=swap">
+<style>
+:root{--bg:#f4f7fc;--surface:#fff;--text:#12254d;--muted:#51618a;--line:#d9e1f2;--navy:#0f2a5e;--gold:#ffb400;--teal:#2fc4b7;box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1a3d;--surface:#102a5c;--text:#eef3ff;--muted:#a9b8dc;--line:#24407a}}
+:root[data-theme="dark"]{--bg:#0a1a3d;--surface:#102a5c;--text:#eef3ff;--muted:#a9b8dc;--line:#24407a}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 "Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.en{font-family:Poppins,"Hind Siliguri",sans-serif}
+header{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;gap:14px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;margin-right:auto}
+.brand svg{width:34px;height:34px}
+nav{display:flex;gap:18px;font-size:15px}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover,nav a:focus-visible{opacity:1;color:var(--gold)}
+.ib{font:inherit;font-size:14px;font-weight:700;background:none;color:#fff;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 12px;cursor:pointer}
+#bm{display:none}
+.hero{background:radial-gradient(circle at 75% 30%,#1c4da0 0,#0f2a5e 55%,#0a1d45 100%);color:#fff;padding:64px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.hero h1{margin:0 0 6px;font-size:clamp(40px,8vw,72px);line-height:1.05}
+.tag{font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--gold);margin:0 0 16px}
+.hero p.d{max-width:46ch;color:#d4def5;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--gold);cursor:pointer;color:#fff;background:none}
+.btn.gold{background:var(--gold);color:#0f2a5e}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.logo{width:min(100%,320px);justify-self:center}
+section{padding:60px 0}
+h2{font-size:clamp(26px,4vw,36px);margin:0 0 8px;line-height:1.25}
+.lead{color:var(--muted);margin:0 0 28px;max-width:58ch}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+input,select,textarea{font:inherit;font-size:16px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);width:100%}
+.tools input{max-width:340px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
+.chip{font:inherit;font-size:15px;padding:7px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#0f2a5e;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#0f2a5e}
+.card .b{padding:16px 18px 18px}
+.badge{display:inline-block;font-size:13px;padding:1px 12px;border-radius:999px;background:var(--teal);color:#06302c;font-weight:700;margin-right:6px}
+.badge.t{background:var(--gold);color:#0f2a5e}
+.card h3{margin:10px 0 6px;font-size:19px;line-height:1.4}
+.card p{margin:0 0 10px;color:var(--muted);font-size:16px}
+.mini{font:inherit;font-size:14px;padding:5px 14px;border-radius:999px;border:1.5px solid var(--teal);background:none;color:var(--text);cursor:pointer;text-decoration:none;display:inline-block}
+.empty{padding:34px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+.item{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
+.item h3{margin:0 0 6px;font-size:20px}
+.item p{margin:0;color:var(--muted);font-size:16px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+form.c{display:grid;gap:12px}
+.cta{background:var(--navy);color:#fff;border-radius:24px;padding:44px 24px;text-align:center}
+.cta p{color:#d4def5;max-width:50ch;margin:0 auto 22px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px;text-align:center}
+footer button{font:inherit;background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer}
+dialog{max-width:560px;width:calc(100% - 32px);border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--text);padding:24px}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+#top2{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:#0f2a5e;font-size:20px;font-weight:700;cursor:pointer;display:none}
+#adm{display:none;background:var(--surface);border:1.5px dashed var(--teal);border-radius:18px;padding:20px;margin-bottom:28px}
+#adm .g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media (max-width:760px){
+ .hero .wrap,.two,#adm .g{grid-template-columns:1fr}
+ .logo{width:160px;justify-self:start;order:-1}
+ #bm{display:inline-block}
+ nav{display:none;position:absolute;top:calc(60px + env(safe-area-inset-top,0px));left:0;right:0;background:var(--navy);flex-direction:column;padding:12px 20px 18px;gap:12px}
+ nav.open{display:flex}
+ section{padding:46px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.card video{width:100%;max-height:440px;aspect-ratio:16/9;object-fit:contain;background:#000;display:block}
+#menu{position:absolute;right:16px;top:calc(58px + env(safe-area-inset-top,0px));background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:6px;min-width:230px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+#menu[hidden]{display:none}
+#menu button{display:block;width:100%;text-align:left;font:inherit;background:none;border:0;color:inherit;padding:10px 12px;border-radius:8px;cursor:pointer}
+#menu button:hover{background:var(--bg)}
+#upd{max-width:600px}
+#upd label{display:grid;gap:4px;font-size:15px;color:var(--muted)}
+.brand{white-space:nowrap}
+#menu a{display:block;padding:10px 12px;text-decoration:none;border-radius:8px;color:inherit}
+#menu a:hover{background:var(--bg)}
+.mn{display:none!important}
+@media (max-width:760px){.mn{display:block!important}#bm{display:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="lg" viewBox="0 0 160 160"><defs><radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#1d4fa3"/><stop offset="1" stop-color="#0c1f4d"/></radialGradient><linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd36e"/><stop offset="1" stop-color="#ffa72a"/></linearGradient></defs><circle cx="80" cy="80" r="77" fill="url(#g)"/><circle cx="80" cy="80" r="70" fill="none" stroke="#ffb400" stroke-width="2.6"/><circle cx="80" cy="60" r="34" fill="#fff" opacity=".18"/><path d="M70 41l26 15q3 2 0 4L70 75q-4 1-4-3V44q0-4 4-3z" fill="url(#p)"/><path d="M30 90q25-8 50 4q25-12 50-4v34q-25-8-50 6q-25-14-50-6z" fill="#2fc4b7"/><path d="M36 88q22-6 43 5v30q-21-11-43-5z" fill="#fff"/><path d="M81 93q21-11 43-5v30q-22-6-43 5z" fill="#dde5f8"/><path d="M44 97q16-3 29 4M44 108q16-3 29 4M88 101q13-7 29-4M88 112q13-7 29-4" stroke="#aab6d6" stroke-width="2.4" fill="none" stroke-linecap="round"/></symbol></defs></svg>
+
+<header>
+ <div class="wrap">
+  <a class="brand" href="#top"><svg><use href="#lg"/></svg><span class="en">Shikhi Online</span></a>
+  <nav id="nav">
+   <a href="#content" data-i="nContent"></a><a href="#learn" data-i="nLearn"></a><a href="#faq" data-i="nFaq"></a><a href="#contact" data-i="nContact"></a>
+  </nav>
+  <button class="ib" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="ib" id="th" type="button" aria-label="Theme">◐</button>
+  <button class="ib" id="dots" type="button" aria-label="Menu" aria-haspopup="true">☰</button>
+ </div>
+<div id="menu" hidden><a class="mn" href="#content" data-i="nContent"></a><a class="mn" href="#learn" data-i="nLearn"></a><a class="mn" href="#faq" data-i="nFaq"></a><a class="mn" href="#contact" data-i="nContact"></a><hr class="mn" style="border:0;border-top:1px solid var(--line);margin:6px 0"><button type="button" id="m1" data-i="up"></button><button type="button" id="m2" data-i="set"></button></div>
+</header>
+
+<main id="top">
+ <div class="hero"><div class="wrap">
+  <div>
+   <h1 class="en">Shikhi Online</h1>
+   <p class="tag" data-i="tag"></p>
+   <p class="d" data-i="desc"></p>
+   <div class="btns"><a class="btn gold" data-yt data-i="sub" target="_blank" rel="noopener"></a><a class="btn" href="#content" data-i="see"></a></div>
+  </div>
+  <svg class="logo" role="img" aria-label="Shikhi Online"><use href="#lg"/></svg>
+ </div></div>
+
+ <section id="content"><div class="wrap">
+  <h2 data-i="hContent"></h2><p class="lead" data-i="lContent"></p>
+  <div id="adm">
+   <b data-i="admT"></b>
+   <div class="g">
+    <select id="at"><option value="video">Video</option><option value="post">Post</option></select>
+    <select id="ac"></select>
+    <input id="ati" placeholder="Title / শিরোনাম">
+    <input id="ayt" placeholder="YouTube URL">
+    <textarea id="abo" rows="2" placeholder="Description / বিবরণ" style="grid-column:1/-1"></textarea>
+   </div>
+   <button class="btn gold" id="agen" type="button" data-i="admGen"></button>
+   <textarea id="aout" rows="4" readonly style="margin-top:12px"></textarea>
+   <p class="lead" style="margin:8px 0 0;font-size:15px" data-i="admHelp"></p>
+  </div>
+  <div class="tools"><input id="q" type="search" data-ph="search"></div>
+  <div class="chips" id="chips" role="group"></div>
+  <div class="cards" id="cards"></div>
+  <div class="empty" id="empty" hidden data-i="empty"></div>
+ </div></section>
+
+ <section id="learn" style="padding-top:0"><div class="wrap">
+  <h2 data-i="hLearn"></h2><p class="lead" data-i="lLearn"></p>
+  <div class="grid" id="lgrid"></div>
+ </div></section>
+
+ <section id="faq" style="padding-top:0"><div class="wrap">
+  <h2 data-i="hFaq"></h2><p class="lead"></p>
+  <div id="faqs"></div>
+ </div></section>
+
+ <section id="contact" style="padding-top:0"><div class="wrap two">
+  <div>
+   <h2 data-i="hContact"></h2><p class="lead" data-i="lContact"></p>
+   <div class="links" id="soc"></div>
+  </div>
+  <form class="c" id="cf" hidden>
+   <input id="cn" required data-ph="yName">
+   <textarea id="cm" rows="4" required data-ph="yMsg"></textarea>
+   <button class="btn gold" type="submit" data-i="send"></button>
+  </form>
+ </div></section>
+
+ <section style="padding-top:0"><div class="wrap"><div class="cta">
+  <h2 data-i="hCta"></h2><p data-i="lCta"></p>
+  <a class="btn gold" data-yt target="_blank" rel="noopener">@ShikhiOnline</a>
+ </div></div></section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Shikhi Online · <button type="button" id="pv" data-i="privacy"></button></div></footer>
+<dialog id="dlg"><h2 data-i="privacy"></h2><p data-i="pvText"></p><button class="btn gold" id="dc" type="button" data-i="close"></button></dialog>
+<dialog id="upd"><h2 data-i="up"></h2>
+<form id="uform" style="display:grid;gap:10px" onsubmit="return false">
+ <select id="ut"></select><select id="uc"></select>
+ <input id="utt" data-ph="fTitle" maxlength="120">
+ <textarea id="ub" rows="3" data-ph="fBody"></textarea>
+ <label><span data-i="fFile"></span><input id="uf" type="file" accept="video/*"></label>
+ <input id="uy" type="url" data-ph="fYt">
+ <details id="uset"><summary data-i="set"></summary><input id="ur" placeholder="username/repository"><input id="ut2" type="password" placeholder="GitHub token" style="margin-top:8px"><p data-i="ghNote" style="font-size:14px"></p></details>
+ <div class="btns"><button class="btn gold" id="pub" type="button" data-i="pubB"></button><button class="btn" id="loc" type="button" style="color:var(--text)" data-i="locB"></button><button class="btn" id="uc2" type="button" style="color:var(--text)" data-i="close"></button></div>
+ <p id="um" style="margin:0;color:var(--muted)"></p>
+ <p data-i="locNote" style="font-size:14px;margin:0;color:var(--muted)"></p>
+</form></dialog>
+<button id="top2" type="button" aria-label="Top">↑</button>
+
+<script>
+/* ====== সেটিংস / SETTINGS (এখানে আপনার লিংক দিন; খালি রাখলে বাটন লুকানো থাকবে) ====== */
+const CFG={YT:"https://www.youtube.com/@ShikhiOnline",FB:"",TG:"",WA:"",EMAIL:""};
+
+/* ====== কনটেন্ট / CONTENT (নতুন ভিডিও-পোস্ট এখানে যোগ করুন; #admin পেজ থেকে লাইন বানাতে পারবেন) ======
+ cat: class | exam | english | skill | it | ai | know   ·   type: "video" | "post"
+ উদাহরণ: {type:"video",cat:"ai",title:"Claude ভুল বললে কীভাবে ধরবেন?",body:"ChatGPT দিয়ে যাচাই",yt:"https://youtube.com/shorts/XXXX",date:"2026-11-21"}, */
+const CONTENT=[
+];
+
+const CATS=["class","exam","english","skill","it","ai","know"];
+const T={
+nContent:["ভিডিও ও পোস্ট","Videos & Posts"],nLearn:["কী শিখবেন","What you'll learn"],nFaq:["প্রশ্নোত্তর","FAQ"],nContact:["যোগাযোগ","Contact"],
+tag:["শিখি সহজে, এগিয়ে চলি","Learn easy, move ahead"],
+desc:["সহজ বাংলায় পড়াশোনা, ইংরেজি শেখা, ক্যারিয়ার গাইডলাইন, ফ্রিল্যান্সিং ও প্রযুক্তির দরকারি টিউটোরিয়াল। উদাহরণ দিয়ে বোঝানো ভিডিও, প্রতি সপ্তাহে নতুন।","Studies in simple Bangla, learning English, career guidance, freelancing and useful tech tutorials. Example-based videos, new every week."],
+sub:["ইউটিউবে সাবস্ক্রাইব করুন","Subscribe on YouTube"],see:["কী শিখবেন দেখুন","See what you'll learn"],
+hContent:["ভিডিও ও পোস্ট","Videos & Posts"],lContent:["ক্যাটাগরি বেছে নিন, ওই ক্যাটাগরির সব ভিডিও ও পোস্ট এখানে দেখতে পাবেন।","Pick a category to see all its videos and posts."],
+search:["ভিডিও বা পোস্ট খুঁজুন...","Search videos or posts..."],all:["সব","All"],
+empty:["এই ক্যাটাগরিতে এখনও কিছু আপলোড হয়নি।","Nothing uploaded in this category yet."],
+video:["ভিডিও","Video"],post:["পোস্ট","Post"],watch:["ইউটিউবে দেখুন","Watch on YouTube"],
+class:["ক্লাস ও টিউটোরিয়াল","Classes & Tutorials"],exam:["পরীক্ষার প্রস্তুতি","Exam Preparation"],english:["Spoken English ও গ্রামার","Spoken English & Grammar"],skill:["স্কিল ডেভেলপমেন্ট","Skill Development"],it:["ফ্রিল্যান্সিং ও আইটি","Freelancing & IT"],ai:["AI টিপস","AI Tips"],know:["জ্ঞানমূলক","Knowledge"],
+d_class:["বাংলায় ধাপে ধাপে ক্লাস, যাতে কঠিন বিষয়ও সহজ লাগে।","Step-by-step classes in Bangla that make hard topics easy."],
+d_exam:["পড়ার কৌশল, সময় ব্যবস্থাপনা ও পরীক্ষার আগের প্রস্তুতি।","Study methods, time management and last-minute prep."],
+d_english:["দৈনন্দিন কথাবার্তার ইংরেজি এবং গ্রামারের সহজ নিয়ম।","Everyday English and simple grammar rules."],
+d_skill:["ক্যারিয়ার টিপস ও কাজে লাগার মতো দক্ষতা গড়ার গাইডলাইন।","Career tips and guidance for building useful skills."],
+d_it:["ফ্রিল্যান্সিং শুরু করার ধারণা এবং প্রযুক্তির মৌলিক বিষয়।","How to start freelancing plus IT basics."],
+d_ai:["AI টুল ব্যবহারের সহজ কৌশল ও টিপস।","Simple ways and tips to use AI tools."],
+d_know:["জানার আগ্রহ মেটানো শিক্ষণীয় ভিডিও।","Educational videos that satisfy your curiosity."],
+hLearn:["এই চ্যানেলে যা পাবেন","What you'll find here"],lLearn:["স্কুল, কলেজ ও বিশ্ববিদ্যালয়ের শিক্ষার্থী থেকে নতুন কিছু শিখতে চাওয়া সবার জন্য।","For school, college and university students and anyone who wants to learn."],
+hFaq:["সাধারণ প্রশ্নোত্তর","Frequently asked questions"],
+q1:["কত দিন পরপর নতুন ভিডিও আসে?","How often are new videos posted?"],a1:["প্রতি সপ্তাহে নতুন ভিডিও আসে।","New videos are posted every week."],
+q2:["ভিডিওগুলো কোন ভাষায়?","Which language are the videos in?"],a2:["সহজ বাংলায়, উদাহরণ দিয়ে। ইংরেজি শেখার ক্লাসে ইংরেজিও থাকে।","Simple Bangla with examples. English lessons also include English."],
+q3:["কোনো ভিডিও মিস না করতে কী করব?","How do I not miss a video?"],a3:["চ্যানেল সাবস্ক্রাইব করে বেল আইকন চাপুন।","Subscribe to the channel and tap the bell icon."],
+q4:["কোন বিষয়ে ভিডিও চাই, জানাতে পারব?","Can I request a topic?"],a4:["অবশ্যই, ইউটিউব কমেন্টে বা এই পেজের যোগাযোগ অংশে জানান।","Of course, tell us in YouTube comments or in the contact section."],
+hContact:["যোগাযোগ","Contact"],lContact:["প্রশ্ন, পরামর্শ বা ভিডিওর অনুরোধ জানান।","Send questions, suggestions or video requests."],
+yName:["আপনার নাম","Your name"],yMsg:["আপনার বার্তা","Your message"],send:["পাঠান","Send"],
+hCta:["প্রতি সপ্তাহে নতুন ভিডিও","New videos every week"],lCta:["সাবস্ক্রাইব করে বেল আইকন চাপুন, যাতে কোনো ভিডিও মিস না হয়।","Subscribe and tap the bell so you never miss a video."],
+privacy:["গোপনীয়তা নীতি","Privacy Policy"],close:["বন্ধ করুন","Close"],
+pvText:["এই সাইট আপনার কোনো ব্যক্তিগত তথ্য সংগ্রহ বা সার্ভারে জমা করে না। ভাষা ও থিমের পছন্দ শুধু আপনার ব্রাউজারে সংরক্ষিত থাকে। ইউটিউব ও সোশ্যাল লিংকগুলো তাদের নিজস্ব নীতি মেনে চলে।","This site does not collect or store your personal data on a server. Language and theme choices are saved only in your browser. YouTube and social links follow their own policies."],
+up:["ভিডিও/পোস্ট আপলোড","Upload video/post"],set:["পাবলিশ সেটিং (GitHub)","Publish settings (GitHub)"],fTitle:["শিরোনাম","Title"],fBody:["বিবরণ","Description"],fFile:["ভিডিও/ছবির ফাইল","Video/image file"],fYt:["অথবা ইউটিউব লিংক","Or YouTube link"],pubB:["সাইটে প্রকাশ করুন","Publish to site"],locB:["শুধু এই ডিভাইসে","This device only"],
+locNote:["'শুধু এই ডিভাইসে' দিলে ভিডিও আপনার ব্রাউজারেই থাকে, অন্যরা দেখবে না। সবাই দেখতে 'সাইটে প্রকাশ করুন' ব্যবহার করুন (১–২ মিনিট পরে সবার কাছে দেখাবে)।","'This device only' keeps the video in your browser; others won't see it. Use 'Publish to site' so everyone can (visible in 1–2 minutes)."],
+ghNote:["repository লিখুন (যেমন username/repo)। token: GitHub → Settings → Developer settings → Fine-grained token, শুধু এই repo-তে Contents: Read and write। token শুধু আপনার ব্রাউজারে থাকে।","Enter repository (e.g. username/repo). Token: GitHub → Settings → Developer settings → Fine-grained token, Contents: Read and write on this repo only. It stays in your browser only."],
+needT:["শিরোনাম দিন","Enter a title"],needF:["ফাইল বা ইউটিউব লিংক দিন","Add a file or a YouTube link"],wait:["আপলোড হচ্ছে, অপেক্ষা করুন...","Uploading, please wait..."],needS:["আগে পাবলিশ সেটিংয়ে repository ও token দিন","Add repository and token in publish settings first"],big:["ফাইল ৫০ MB-এর বেশি, ইউটিউব লিংক ব্যবহার করুন","File is over 50 MB, use a YouTube link"],err:["আপলোড ব্যর্থ হয়েছে","Upload failed"],del:["মুছুন","Delete"],
+admT:["নতুন কনটেন্টের লাইন বানান (শুধু আপনার জন্য)","Build a new content line (for you only)"],admGen:["লাইন তৈরি করুন","Generate line"],
+admHelp:["লাইনটি কপি করে index.html-এর CONTENT তালিকায় বসান, তারপর GitHub-এ সেভ করুন।","Copy the line into the CONTENT list in index.html, then commit on GitHub."]
+};
+const $=id=>document.getElementById(id);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+let L=0,cur="all";
+try{L=localStorage.getItem("lang")==="en"?1:0}catch(e){}
+const t=k=>(T[k]||["",""])[L];
+const ytId=u=>{const m=/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/.exec(u||"");return m&&m[1]};
+
+function chips(){const b=$("chips");b.textContent="";["all",...CATS].forEach(c=>{const n=c==="all"?ALL().length:ALL().filter(i=>i.cat===c).length;const x=el("button","chip",t(c)+" ("+n+")");x.type="button";x.setAttribute("aria-pressed",String(c===cur));x.onclick=()=>{cur=c;cards()};b.appendChild(x)})}
+function cards(){chips();const b=$("cards"),q=$("q").value.trim().toLowerCase();b.textContent="";
+ const list=ALL().filter(i=>(cur==="all"||i.cat===cur)&&(!q||((i.title||"")+" "+(i.body||"")).toLowerCase().includes(q))).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+ $("empty").hidden=list.length>0;
+ list.forEach(i=>{const c=el("article","card"),id=ytId(i.yt),link=i.yt&&/^https:\/\//.test(i.yt)?i.yt:"";
+  const src=i.img||(i.type==="post"&&i.file)||(id&&"https://i.ytimg.com/vi/"+id+"/hqdefault.jpg");
+  const vf=i.vurl||(i.file&&i.type!=="post"?i.file:"");if(vf){const v=el("video");v.controls=true;v.preload="metadata";v.playsInline=true;v.src=vf;c.appendChild(v)}else if(src){const m=el("img");m.src=src;m.alt=i.title||"";m.loading="lazy";m.onerror=()=>m.remove();if(link){const a=el("a");a.href=link;a.target="_blank";a.rel="noopener";a.appendChild(m);c.appendChild(a)}else c.appendChild(m)}
+  const d=el("div","b");d.append(el("span","badge t",t(i.type==="post"?"post":"video")),el("span","badge",t(i.cat)),el("h3",0,i.title||""));
+  if(i.body)d.appendChild(el("p",0,i.body));
+  if(link){const a=el("a","mini",t("watch"));a.href=link;a.target="_blank";a.rel="noopener";d.appendChild(a)}
+  if(i.lid){const x=el("button","mini",t("del"));x.type="button";x.style.marginLeft="8px";x.onclick=async()=>{await idbDo("readwrite",q=>q.delete(i.lid));await loadLocal()};d.appendChild(x)}
+  c.appendChild(d);b.appendChild(c)})}
+function static_(){$("lgrid").textContent="";CATS.forEach(c=>{const i=el("div","item");i.append(el("h3",0,t(c)),el("p",0,t("d_"+c)));$("lgrid").appendChild(i)});
+ $("faqs").textContent="";[1,2,3,4].forEach(n=>{const d=el("details");d.append(el("summary",0,t("q"+n)),el("p",0,t("a"+n)));$("faqs").appendChild(d)});
+ const s=$("soc");s.textContent="";[["YouTube",CFG.YT],["Facebook",CFG.FB],["Telegram",CFG.TG],["WhatsApp",CFG.WA]].forEach(([n,u])=>{if(!u)return;const a=el("a","btn",n);a.href=u;a.target="_blank";a.rel="noopener";s.appendChild(a)});
+ if(CFG.EMAIL){const a=el("a","btn","Email");a.href="mailto:"+CFG.EMAIL;s.appendChild(a)}}
+function apply(){document.documentElement.lang=L?"en":"bn";document.title=L?"Shikhi Online | Learn easy, move ahead":"শিখি অনলাইন | Shikhi Online";$("lang").textContent=L?"বাংলা":"EN";
+ document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
+ document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+ $("ac").textContent="";CATS.forEach(c=>{const o=el("option",0,t(c));o.value=c;$("ac").appendChild(o)});
+ for(const[id,k]of[["uc",CATS],["ut",["video","post"]]]){const sel=$(id);sel.textContent="";k.forEach(c=>{const o=el("option",0,t(c));o.value=c;sel.appendChild(o)})}
+ static_();cards()}
+
+$("lang").onclick=()=>{L=1-L;try{localStorage.setItem("lang",L?"en":"bn")}catch(e){}apply()};
+$("th").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";try{localStorage.setItem("theme",r.dataset.theme)}catch(e){}};
+try{const s=localStorage.getItem("theme");if(s)document.documentElement.dataset.theme=s}catch(e){}
+$("q").oninput=cards;
+document.querySelectorAll("[data-yt]").forEach(a=>a.href=CFG.YT);
+$("pv").onclick=()=>$("dlg").showModal();$("dc").onclick=()=>$("dlg").close();
+$("y").textContent=new Date().getFullYear();
+if(CFG.EMAIL){$("cf").hidden=false;$("cf").onsubmit=e=>{e.preventDefault();location.href="mailto:"+CFG.EMAIL+"?subject="+encodeURIComponent("Shikhi Online — "+$("cn").value)+"&body="+encodeURIComponent($("cm").value)}}
+addEventListener("scroll",()=>{$("top2").style.display=scrollY>600?"block":"none"},{passive:true});
+$("top2").onclick=()=>scrollTo({top:0});
+if(location.hash==="#admin"){$("adm").style.display="block"}
+$("agen").onclick=()=>{const q=s=>JSON.stringify(s);const o='{type:'+q($("at").value)+',cat:'+q($("ac").value)+',title:'+q($("ati").value.trim())+(($("abo").value.trim())?',body:'+q($("abo").value.trim()):'')+(($("ayt").value.trim())?',yt:'+q($("ayt").value.trim()):'')+',date:'+q(new Date().toISOString().slice(0,10))+'},';$("aout").value=o;$("aout").select()};
+let REMOTE=[],LOCAL=[];const ALL=()=>CONTENT.concat(REMOTE,LOCAL);
+const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open("shikhi",1);r.onupgradeneeded=()=>r.result.createObjectStore("v",{keyPath:"id"});r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
+async function idbDo(mode,fn){const d=await idb();return new Promise((res,rej)=>{const tx=d.transaction("v",mode),q=fn(tx.objectStore("v"));tx.oncomplete=()=>res(q&&q.result);tx.onerror=()=>rej(tx.error)})}
+async function loadLocal(){try{const rows=await idbDo("readonly",s=>s.getAll());LOCAL=(rows||[]).map(r=>{const u=r.blob?URL.createObjectURL(r.blob):"";return{...r,blob:undefined,lid:r.id,vurl:r.type==="video"?u:"",img:r.type==="post"?u:""}});cards()}catch(e){}}
+async function loadRemote(){try{const r=await fetch("content.json",{cache:"no-store"});if(r.ok){REMOTE=await r.json();cards()}}catch(e){}}
+let S={};try{S=JSON.parse(localStorage.getItem("gh")||"{}")}catch(e){}
+$("ur").value=S.repo||"";$("ut2").value=S.tok||"";
+$("ur").oninput=$("ut2").oninput=()=>{S={repo:$("ur").value.trim(),tok:$("ut2").value.trim()};try{localStorage.setItem("gh",JSON.stringify(S))}catch(e){}};
+const api=p=>"https://api.github.com/repos/"+S.repo+"/contents/"+p;
+const hd=()=>({Authorization:"Bearer "+S.tok,Accept:"application/vnd.github+json"});
+async function gh(p,b){const r=await fetch(api(p),{method:"PUT",headers:hd(),body:JSON.stringify(b)});if(!r.ok){let m="";try{m=(await r.json()).message}catch(e){}throw new Error("GitHub "+r.status+": "+m)}}
+const b64=f=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(",")[1]);r.onerror=rej;r.readAsDataURL(f)});
+const enc=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o,null,1))));
+$("dots").onclick=e=>{e.stopPropagation();$("menu").hidden=!$("menu").hidden};
+document.addEventListener("click",()=>{$("menu").hidden=true});
+function openUp(sett){$("menu").hidden=true;$("um").textContent="";$("uset").open=!!sett;$("upd").showModal()}
+$("m1").onclick=()=>openUp(false);$("m2").onclick=()=>openUp(true);$("uc2").onclick=()=>$("upd").close();
+$("ut").onchange=()=>{$("uf").accept=$("ut").value==="video"?"video/*":"image/*"};
+async function doUpload(mode){const m=$("um"),type=$("ut").value,cat=$("uc").value,title=$("utt").value.trim(),body=$("ub").value.trim(),yt=$("uy").value.trim(),f=$("uf").files[0];
+ if(!title){m.textContent=t("needT");return}
+ if(!f&&!yt){m.textContent=t("needF");return}
+ const rec={type,cat,title,date:new Date().toISOString().slice(0,10)};if(body)rec.body=body;if(yt)rec.yt=yt;
+ $("pub").disabled=$("loc").disabled=true;m.textContent=t("wait");
+ try{
+  if(mode==="loc"){rec.id="l"+Date.now();rec.blob=f||null;await idbDo("readwrite",s=>s.put(rec));await loadLocal()}
+  else{if(!S.repo||!S.tok)throw new Error(t("needS"));if(f&&f.size>50*1048576)throw new Error(t("big"));
+   if(f){const ext=(f.name.split(".").pop()||"bin").replace(/\W/g,"");const path="uploads/"+Date.now()+"."+ext;await gh(path,{message:"Add "+title,content:await b64(f)});rec.file=path}
+   let sha,arr=[];const g=await fetch(api("content.json"),{headers:hd()});
+   if(g.ok){const j=await g.json();sha=j.sha;arr=JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,"")))))}
+   arr.push(rec);await gh("content.json",{message:"Update content",content:enc(arr),sha});REMOTE=arr}
+  cur=cat;$("q").value="";cards();$("upd").close();["uf","utt","ub","uy"].forEach(k=>$(k).value="");location.hash="#content"
+ }catch(e){m.textContent=(e&&e.message)||t("err")}
+ $("pub").disabled=$("loc").disabled=false}
+$("pub").onclick=()=>doUpload("pub");$("loc").onclick=()=>doUpload("loc");
+loadLocal();loadRemote();
+apply();
+</script>
+</body>
+</html>
